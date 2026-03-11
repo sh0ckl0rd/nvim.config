@@ -2,7 +2,7 @@
 local cached_branch = ""
 local last_check = 0
 local function git_branch()
-	local now = vim.loop.now()
+	local now = vim.uv.now()
 	if now - last_check > 5000 then -- Check every 5 seconds
 		cached_branch = vim.fn.system("git branch --show-current 2>/dev/null | tr -d '\n'")
 		last_check = now

@@ -26,7 +26,7 @@ vim.opt.incsearch = true -- show matches as you type
 vim.opt.signcolumn = "yes" -- always show a sign column
 -- vim.opt.colorcolumn = "100" -- show a column at 100 position chars
 vim.opt.showmatch = true -- highlights matching brackets
-vim.opt.cmdheight = 1 -- single line command line
+vim.opt.cmdheight = 0 -- hide cmdline, noice.nvim will show messages in popup
 vim.opt.completeopt = "menuone,noinsert,noselect" -- completion options
 vim.opt.showmode = false -- do not show the mode, instead have it in statusline
 vim.opt.pumheight = 10 -- popup menu height
@@ -34,7 +34,6 @@ vim.opt.pumblend = 10 -- popup menu transparency
 vim.opt.winblend = 0 -- floating window transparency
 vim.opt.conceallevel = 0 -- do not hide markup
 vim.opt.concealcursor = "" -- do not hide cursorline in markup
-vim.opt.lazyredraw = true -- do not redraw during macros
 vim.opt.synmaxcol = 300 -- syntax highlighting limit
 vim.opt.fillchars = { eob = " " } -- hide "~" on empty lines
 

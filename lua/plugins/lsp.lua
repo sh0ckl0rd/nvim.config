@@ -237,15 +237,3 @@ do
 	})
 end
 
-vim.lsp.enable({
-	"rust-analyzer",
-	"lua_ls",
-	"pyright",
-	"bashls",
-	"ts_ls",
-	"gopls",
-	"clangd",
-	"efm",
-	"zls",
-	"ols",
-})

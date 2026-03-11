@@ -11,7 +11,7 @@
     "blink.cmp": {
       "rev": "8936aee785533553cb00b6a50f8c8a835ff46fdd",
       "src": "https://github.com/saghen/blink.cmp",
-      "version": "1.0.0 - 2.0.0"
+      "version": "0.10.0 - 0.11.0"
     },
     "blink.nvim": {
       "rev": "d1e7c7c45d45c6b6a25427bf62db4db73b03ff3d",
@@ -29,6 +29,10 @@
       "rev": "7c4faa3540d0781a28588cafbd4dd187a28ac6e3",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
+    "harpoon": {
+      "rev": "1bc17e3e42ea3c46b33c0bbad6a880792692a1b3",
+      "src": "https://github.com/ThePrimeagen/harpoon"
+    },
     "lush.nvim": {
       "rev": "9c60ec2279d62487d942ce095e49006af28eed6e",
       "src": "https://github.com/rktjmp/lush.nvim"
@@ -44,6 +48,10 @@
     "mini.nvim": {
       "rev": "9d359222b3643f1fccbd8f3180445842e1cae00b",
       "src": "https://github.com/nvim-mini/mini.nvim"
+    },
+    "noice.nvim": {
+      "rev": "7bfd942445fb63089b59f97ca487d605e715f155",
+      "src": "https://github.com/folke/noice.nvim"
     },
     "nvim-lspconfig": {
       "rev": "0203a9608d63eda57679b01e69f33a7b4c34b0d1",
