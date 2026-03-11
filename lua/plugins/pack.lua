@@ -14,6 +14,7 @@ vim.pack.add({
 	"https://github.com/nyoom-engineering/oxocarbon.nvim",
 	"https://github.com/folke/which-key.nvim",
 	"https://github.com/goolord/alpha-nvim",
+	"https://github.com/nvim-tree/nvim-web-devicons",
 
 	-- Language Server Protocols
 	"https://www.github.com/neovim/nvim-lspconfig",

@@ -65,6 +65,10 @@
       "rev": "5cb05e1b0fa3c469958a2b26f36b3fe930af221c",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
+    "nvim-web-devicons": {
+      "rev": "d7462543c9e366c0d196c7f67a945eaaf5d99414",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
     "oxocarbon.nvim": {
       "rev": "9f85f6090322f39b11ae04a343d4eb9d12a86897",
       "src": "https://github.com/nyoom-engineering/oxocarbon.nvim"
