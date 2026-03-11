@@ -8,7 +8,7 @@ local diagnostic_signs = {
 local Augroup = vim.api.nvim_create_augroup("lsp", { clear = false })
 
 vim.diagnostic.config({
-	virtual_text = { prefix = "●", spacing = 4 },
+	virtual_text = false,
 	signs = {
 		text = {
 			[vim.diagnostic.severity.ERROR] = diagnostic_signs.Error,
@@ -117,6 +117,22 @@ vim.keymap.set("n", "<leader>q", function()
 	vim.diagnostic.setloclist({ open = true })
 end, { desc = "Open diagnostic list" })
 vim.keymap.set("n", "<leader>dl", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+vim.keymap.set("n", "<leader>xd", function()
+  local config = vim.diagnostic.config()
+  if config.virtual_text == true and config.signs == true and config.underline == true then
+    vim.diagnostic.config({ virtual_text = false, signs = false, underline = false })
+  else
+    vim.diagnostic.config({ virtual_text = true, signs = true, underline = true })
+  end
+end, { desc = "Toggle diagnostics" })
+vim.keymap.set("n", "<leader>xv", function()
+  local config = vim.diagnostic.config()
+  if config.virtual_text == false then
+    vim.diagnostic.config({ virtual_text = true })
+  else
+    vim.diagnostic.config({ virtual_text = false })
+  end
+end, { desc = "Toggle virtual text" })
 
 require("blink.cmp").setup({
 	keymap = {

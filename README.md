@@ -106,6 +106,8 @@ All keybindings use `<Space>` as the leader key.
 | `<Leader>fw` | Workspace symbols |
 | `<Leader>fi` | Find implementations |
 | `<Leader>oi` | Organize imports |
+| `<Leader>xd` | Toggle all diagnostics |
+| `<Leader>xv` | Toggle inline text (keep signs/underline) |
 | `<Leader>d` | Show cursor diagnostics |
 | `<Leader>D` | Show line diagnostics |
 | `<Leader>nd` | Next diagnostic |
