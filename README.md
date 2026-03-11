@@ -12,7 +12,6 @@ lua/
 │   ├── autocmds.lua   # Auto commands
 │   ├── statusline.lua # Custom statusline
 │   ├── term.lua       # Terminal config
-│   └── which-key.lua  # Which-key (empty)
 └── plugins/
     ├── pack.lua       # Plugin definitions
     ├── lsp.lua        # LSP & completion
