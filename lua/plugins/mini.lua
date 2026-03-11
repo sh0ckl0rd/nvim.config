@@ -8,4 +8,4 @@ require("mini.pairs").setup({})
 require("mini.trailspace").setup({})
 require("mini.bufremove").setup({})
 require("mini.icons").setup({})
-
+require("mini.notify").setup({})
