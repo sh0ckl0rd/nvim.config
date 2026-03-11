@@ -20,3 +20,5 @@ require("plugins.fzf-lua")
 require("plugins.mini")
 require("plugins.gitsigns")
 require("plugins.treesitter-nvim")
+
+vim.cmd.colorscheme("oxocarbon")

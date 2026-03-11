@@ -9,5 +9,7 @@ vim.pack.add({
 		build = ":TSUpdate",
 	},
         "https://github.com/zenbones-theme/zenbones.nvim",
+        "https://github.com/rktjmp/lush.nvim",
+        "https://github.com/nyoom-engineering/oxocarbon.nvim",
 })
 
