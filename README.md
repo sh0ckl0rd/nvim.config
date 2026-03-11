@@ -162,3 +162,7 @@ All keybindings use `<Space>` as the leader key.
 ## Customization
 
 Edit the respective files in `lua/config/` or `lua/plugins/` to modify behavior. After changes, restart Neovim or run `:source ~/.config/nvim/init.lua`, or `:restart`.
+
+## Troubleshooting
+
+If blink complains, :BlinkCmp build
