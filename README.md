@@ -1,6 +1,6 @@
 # Neovim Configuration
 
-A minimal, fast Neovim config using native Neovim features with Lua.
+A Neovim config using native Neovim features with Lua.
 
 ## Overview
 
