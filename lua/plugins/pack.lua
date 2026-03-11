@@ -11,5 +11,7 @@ vim.pack.add({
         "https://github.com/zenbones-theme/zenbones.nvim",
         "https://github.com/rktjmp/lush.nvim",
         "https://github.com/nyoom-engineering/oxocarbon.nvim",
+        "https://github.com/folke/which-key.nvim",
+        "https://github.com/goolord/alpha-nvim",
 })
 
