@@ -3,5 +3,11 @@ vim.pack.add({
         "https://github.com/ibhagwan/fzf-lua",
         "https://github.com/nvim-mini/mini.nvim",
         "https://github.com/lewis6991/gitsigns.nvim",
+        {
+		src = "https://github.com/nvim-treesitter/nvim-treesitter",
+		branch = "main",
+		build = ":TSUpdate",
+	},
+        "https://github.com/zenbones-theme/zenbones.nvim",
 })
 

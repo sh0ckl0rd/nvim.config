@@ -15,6 +15,14 @@
     "nvim-tree.lua": {
       "rev": "4b30847c91d498446cb8440c03031359b045e050",
       "src": "https://github.com/nvim-tree/nvim-tree.lua"
+    },
+    "nvim-treesitter": {
+      "rev": "5cb05e1b0fa3c469958a2b26f36b3fe930af221c",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
+    "zenbones.nvim": {
+      "rev": "22b7fb75593412e0dc81b4bdefae718e9e84aa82",
+      "src": "https://github.com/zenbones-theme/zenbones.nvim"
     }
   }
 }
