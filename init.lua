@@ -24,4 +24,4 @@ require("plugins.alpha")
 require("plugins.mason")
 require("plugins.lsp")
 
-vim.cmd.colorscheme("oxocarbon")
+vim.cmd.colorscheme("neobones")
