@@ -5,6 +5,8 @@ local diagnostic_signs = {
 	Info = "",
 }
 
+local Augroup = vim.api.nvim_create_augroup("lsp", { clear = false })
+
 vim.diagnostic.config({
 	virtual_text = { prefix = "●", spacing = 4 },
 	signs = {
@@ -48,52 +50,52 @@ local function lsp_on_attach(ev)
 
 	vim.keymap.set("n", "<leader>gd", function()
 		require("fzf-lua").lsp_definitions({ jump_to_single_result = true })
-	end, opts)
+	end, { desc = "Go to definitions", buffer = bufnr, noremap = true, silent = true })
 
-	vim.keymap.set("n", "<leader>gD", vim.lsp.buf.definition, opts)
+	vim.keymap.set("n", "<leader>gD", vim.lsp.buf.definition, { desc = "Go to definition", buffer = bufnr, noremap = true, silent = true })
 
 	vim.keymap.set("n", "<leader>gS", function()
 		vim.cmd("vsplit")
 		vim.lsp.buf.definition()
-	end, opts)
+	end, { desc = "Go to definition in split", buffer = bufnr, noremap = true, silent = true })
 
-	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions", buffer = bufnr, noremap = true, silent = true })
+	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol", buffer = bufnr, noremap = true, silent = true })
 
 	vim.keymap.set("n", "<leader>D", function()
 		vim.diagnostic.open_float({ scope = "line" })
-	end, opts)
+	end, { desc = "Show line diagnostics", buffer = bufnr, noremap = true, silent = true })
 	vim.keymap.set("n", "<leader>d", function()
 		vim.diagnostic.open_float({ scope = "cursor" })
-	end, opts)
+	end, { desc = "Show cursor diagnostics", buffer = bufnr, noremap = true, silent = true })
 	vim.keymap.set("n", "<leader>nd", function()
 		vim.diagnostic.jump({ count = 1 })
-	end, opts)
+	end, { desc = "Next diagnostic", buffer = bufnr, noremap = true, silent = true })
 
 	vim.keymap.set("n", "<leader>pd", function()
 		vim.diagnostic.jump({ count = -1 })
-	end, opts)
+	end, { desc = "Previous diagnostic", buffer = bufnr, noremap = true, silent = true })
 
-	vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+	vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover", buffer = bufnr, noremap = true, silent = true })
 
 	vim.keymap.set("n", "<leader>fd", function()
-		require("fzf-lua").lsp_definitions({ jump_to_single_result = true })
-	end, opts)
+		require("fzf-lua").lsp_declarations({ jump_to_single_result = true })
+	end, { desc = "Go to declarations", buffer = bufnr, noremap = true, silent = true })
 	vim.keymap.set("n", "<leader>fr", function()
 		require("fzf-lua").lsp_references()
-	end, opts)
+	end, { desc = "Find references", buffer = bufnr, noremap = true, silent = true })
 	vim.keymap.set("n", "<leader>ft", function()
 		require("fzf-lua").lsp_typedefs()
-	end, opts)
+	end, { desc = "Find type definitions", buffer = bufnr, noremap = true, silent = true })
 	vim.keymap.set("n", "<leader>fs", function()
 		require("fzf-lua").lsp_document_symbols()
-	end, opts)
+	end, { desc = "Document symbols", buffer = bufnr, noremap = true, silent = true })
 	vim.keymap.set("n", "<leader>fw", function()
 		require("fzf-lua").lsp_workspace_symbols()
-	end, opts)
+	end, { desc = "Workspace symbols", buffer = bufnr, noremap = true, silent = true })
 	vim.keymap.set("n", "<leader>fi", function()
 		require("fzf-lua").lsp_implementations()
-	end, opts)
+	end, { desc = "Find implementations", buffer = bufnr, noremap = true, silent = true })
 
 	if client:supports_method("textDocument/codeAction", bufnr) then
 		vim.keymap.set("n", "<leader>oi", function()
@@ -105,7 +107,7 @@ local function lsp_on_attach(ev)
 			vim.defer_fn(function()
 				vim.lsp.buf.format({ bufnr = bufnr })
 			end, 50)
-		end, opts)
+		end, { desc = "Organize imports", buffer = bufnr, noremap = true, silent = true })
 	end
 end
 
@@ -158,6 +160,14 @@ vim.lsp.config("bashls", {})
 vim.lsp.config("ts_ls", {})
 vim.lsp.config("gopls", {})
 vim.lsp.config("clangd", {})
+vim.lsp.config("zls", {
+	settings = {
+		zls = {
+			enable = true,
+		},
+	},
+})
+vim.lsp.config("ols", {})
 
 do
 	local luacheck = require("efmls-configs.linters.luacheck")
@@ -199,6 +209,8 @@ do
 			"typescriptreact",
 			"vue",
 			"svelte",
+			"zig",
+			"odin",
 		},
 		init_options = { documentFormatting = true },
 		settings = {
@@ -234,4 +246,6 @@ vim.lsp.enable({
 	"gopls",
 	"clangd",
 	"efm",
+	"zls",
+	"ols",
 })
