@@ -21,5 +21,7 @@ require("plugins.mini")
 require("plugins.gitsigns")
 require("plugins.treesitter-nvim")
 require("plugins.alpha")
+require("plugins.mason")
+require("plugins.lsp")
 
 vim.cmd.colorscheme("oxocarbon")

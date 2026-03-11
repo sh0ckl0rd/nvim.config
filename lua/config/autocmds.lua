@@ -2,11 +2,11 @@
 --                      AUTOCMDS
 -- 0=================================================0
 
-local augroup = vim.api.nvim_create_augroup("UserConfig", { clear = true })
+Augroup = vim.api.nvim_create_augroup("UserConfig", { clear = true })
 
 -- Format on save (ONLY real file buffers, ONLY when efm is attached)
 vim.api.nvim_create_autocmd("BufWritePre", {
-	group = augroup,
+	group = Augroup,
 	pattern = {
 		"*.lua",
 		"*.py",
@@ -61,7 +61,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-	group = augroup,
+	group = Augroup,
 	callback = function()
 		vim.hl.on_yank()
 	end,
@@ -69,7 +69,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- return to last cursor position
 vim.api.nvim_create_autocmd("BufReadPost", {
-	group = augroup,
+	group = Augroup,
 	desc = "Restore last cursor position",
 	callback = function()
 		if vim.o.diff then -- except in diff mode
@@ -90,7 +90,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 
 -- wrap, linebreak and spellcheck on markdown and text files
 vim.api.nvim_create_autocmd("FileType", {
-	group = augroup,
+	group = Augroup,
 	pattern = { "markdown", "text", "gitcommit" },
 	callback = function()
 		vim.opt_local.wrap = true
