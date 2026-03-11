@@ -8,6 +8,7 @@ dashboard.section.header.val = {
         "╚════██║██╔══██║██║   ██║██║     ██╔═██╗ ██║     ██║   ██║██╔══██╗██║  ██║",
         "███████║██║  ██║╚██████╔╝╚██████╗██║  ██╗███████╗╚██████╔╝██║  ██║██████╔╝",
         "╚══════╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝",
+        "                                                       NVIM CONFIG v1",
 }
 
 dashboard.section.buttons.val = {
@@ -18,3 +19,10 @@ dashboard.section.buttons.val = {
 }
 
 alpha.setup(dashboard.config)
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "alpha",
+  callback = function()
+    vim.b.miniindentscope_disable = true
+  end,
+})
