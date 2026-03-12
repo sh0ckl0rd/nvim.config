@@ -152,7 +152,7 @@ end, { desc = "Toggle virtual text" })
 require("blink.cmp").setup({
 	keymap = {
 		preset = "none",
-		["<C-Space>"] = { "show", "hide" },
+		["C-<Space>"] = { "show", "hide" },
 		["<CR>"] = { "accept", "fallback" },
 		["<C-j>"] = { "select_next", "fallback" },
 		["<C-k>"] = { "select_prev", "fallback" },
