@@ -90,6 +90,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("e", "  New file", "<cmd>ene<BAR>startinsert<CR>"),
 	dashboard.button("r", "  Recent files", "<cmd>FzfLua oldfiles<CR>"),
 	dashboard.button("f", "  Find file", "<cmd>FzfLua files<CR>"),
+	dashboard.button("m", "  Mason", "<cmd>Mason<CR>"),
 	dashboard.button("c", "  Config", "<cmd>e $MYVIMRC<CR>"),
 	dashboard.button("q", "  Quit", "<cmd>qa<CR>"),
 }
