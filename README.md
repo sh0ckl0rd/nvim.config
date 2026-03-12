@@ -73,6 +73,13 @@ All keybindings use `<Space>` as the leader key.
 | `<` / `>` | Indent and reselect |
 | `<A-j>` / `<A-k>` | Move selection down/up |
 
+### Terminal
+
+| Key | Action |
+|-----|--------|
+| `<Leader>t` | Toggle floating terminal |
+| `<Esc>` | Close floating terminal (in terminal) |
+
 ### File Tree
 
 | Key | Action |

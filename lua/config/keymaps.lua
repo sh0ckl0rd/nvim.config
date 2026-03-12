@@ -50,8 +50,4 @@ vim.keymap.set("n", "<leader>pa", function() -- show file path
 	print("file:", path)
 end, { desc = "Copy full file path" })
 
-vim.keymap.set("n", "<leader>td", function()
-	vim.diagnostic.enable(not vim.diagnostic.is_enabled())
-end, { desc = "Toggle diagnostics" })
-
 vim.keymap.set("x", '<leader>"', '<Esc>`>a"<Esc>`<i"', { desc = "Wrap selection in quotes" })

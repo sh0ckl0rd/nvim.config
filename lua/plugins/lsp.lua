@@ -52,15 +52,30 @@ local function lsp_on_attach(ev)
 		require("fzf-lua").lsp_definitions({ jump_to_single_result = true })
 	end, { desc = "Go to definitions", buffer = bufnr, noremap = true, silent = true })
 
-	vim.keymap.set("n", "<leader>gD", vim.lsp.buf.definition, { desc = "Go to definition", buffer = bufnr, noremap = true, silent = true })
+	vim.keymap.set(
+		"n",
+		"<leader>gD",
+		vim.lsp.buf.definition,
+		{ desc = "Go to definition", buffer = bufnr, noremap = true, silent = true }
+	)
 
 	vim.keymap.set("n", "<leader>gS", function()
 		vim.cmd("vsplit")
 		vim.lsp.buf.definition()
 	end, { desc = "Go to definition in split", buffer = bufnr, noremap = true, silent = true })
 
-	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions", buffer = bufnr, noremap = true, silent = true })
-	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol", buffer = bufnr, noremap = true, silent = true })
+	vim.keymap.set(
+		"n",
+		"<leader>ca",
+		vim.lsp.buf.code_action,
+		{ desc = "Code actions", buffer = bufnr, noremap = true, silent = true }
+	)
+	vim.keymap.set(
+		"n",
+		"<leader>rn",
+		vim.lsp.buf.rename,
+		{ desc = "Rename symbol", buffer = bufnr, noremap = true, silent = true }
+	)
 
 	vim.keymap.set("n", "<leader>D", function()
 		vim.diagnostic.open_float({ scope = "line" })
@@ -118,20 +133,20 @@ vim.keymap.set("n", "<leader>q", function()
 end, { desc = "Open diagnostic list" })
 vim.keymap.set("n", "<leader>dl", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 vim.keymap.set("n", "<leader>xd", function()
-  local config = vim.diagnostic.config()
-  if config.virtual_text == true and config.signs == true and config.underline == true then
-    vim.diagnostic.config({ virtual_text = false, signs = false, underline = false })
-  else
-    vim.diagnostic.config({ virtual_text = true, signs = true, underline = true })
-  end
+	local config = vim.diagnostic.config()
+	if config.virtual_text == true and config.signs == true and config.underline == true then
+		vim.diagnostic.config({ virtual_text = false, signs = false, underline = false })
+	else
+		vim.diagnostic.config({ virtual_text = true, signs = true, underline = true })
+	end
 end, { desc = "Toggle diagnostics" })
 vim.keymap.set("n", "<leader>xv", function()
-  local config = vim.diagnostic.config()
-  if config.virtual_text == false then
-    vim.diagnostic.config({ virtual_text = true })
-  else
-    vim.diagnostic.config({ virtual_text = false })
-  end
+	local config = vim.diagnostic.config()
+	if config.virtual_text == false then
+		vim.diagnostic.config({ virtual_text = true })
+	else
+		vim.diagnostic.config({ virtual_text = false })
+	end
 end, { desc = "Toggle virtual text" })
 
 require("blink.cmp").setup({
@@ -252,4 +267,3 @@ do
 		},
 	})
 end
-

@@ -13,6 +13,7 @@ require("config.options")
 require("config.autocmds")
 require("config.keymaps")
 require("config.statusline")
+require("config.term")
 
 require("plugins.pack")
 require("plugins.nvim-tree")
