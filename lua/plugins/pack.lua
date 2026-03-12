@@ -3,7 +3,6 @@ vim.pack.add({
 	"https://github.com/ibhagwan/fzf-lua",
 	"https://github.com/nvim-mini/mini.nvim",
 	"https://github.com/lewis6991/gitsigns.nvim",
-	"https://github.com/ThePrimeagen/harpoon",
 	{
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
@@ -15,6 +14,7 @@ vim.pack.add({
 	"https://github.com/folke/which-key.nvim",
 	"https://github.com/goolord/alpha-nvim",
 	"https://github.com/nvim-tree/nvim-web-devicons",
+	"https://github.com/nvim-lua/plenary.nvim",
 
 	-- Language Server Protocols
 	"https://www.github.com/neovim/nvim-lspconfig",

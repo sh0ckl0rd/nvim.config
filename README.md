@@ -21,8 +21,7 @@ lua/
     ├── mini.lua       # Mini.nvim modules
     ├── gitsigns.lua   # Git integration
     ├── treesitter-nvim.lua # Treesitter
-    ├── alpha.lua      # Start screen
-    └── harpoon.lua    # Quick file navigation
+    └── alpha.lua      # Start screen
 ```
 
 ## Keybindings
@@ -71,7 +70,6 @@ All keybindings use `<Space>` as the leader key.
 | Key | Action |
 |-----|--------|
 | `<Leader>p` | Paste without yanking |
-| `<Leader>x` | Delete without yanking |
 | `<` / `>` | Indent and reselect |
 | `<A-j>` / `<A-k>` | Move selection down/up |
 
@@ -80,14 +78,6 @@ All keybindings use `<Space>` as the leader key.
 | Key | Action |
 |-----|--------|
 | `<Leader>e` | Toggle NvimTree |
-
-### Harpoon
-
-| Key | Action |
-|-----|--------|
-| `<Leader>ha` | Add file to harpoon |
-| `<Leader>hm` | Toggle harpoon menu |
-| `<Leader>h1-4` | Go to harpoon mark 1-4 |
 
 ### LSP (when LSP attached)
 
@@ -139,7 +129,6 @@ All keybindings use `<Space>` as the leader key.
 | **blink.cmp** | Completion engine |
 | **LuaSnip** | Snippets |
 | **oxocarbon.nvim** | Theme |
-| **harpoon** | Quick file navigation |
 
 ## Options Highlights
 
