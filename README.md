@@ -1,5 +1,5 @@
 # Shocklord's Nvim
-<img width="929" height="619" alt="image" src="https://github.com/user-attachments/assets/05f1fae5-eea5-4ebd-87f8-8729ec364c84" />
+<img width="857" height="461" alt="image" src="https://github.com/user-attachments/assets/49e3bc56-2450-43b2-b11b-a3d3bebe2014" />
 
 
 A Neovim config using native Neovim features with Lua.
