@@ -47,7 +47,7 @@ end
 
 dashboard.section.header.val = {
 	"     01110011 01101000 01101111 01100011 01101011 01101100 01101111 01110010 01100100",
-	"                                                            AD MAIORA, NVIM CONFIG v1",
+	"                                                                            AD MAIORA",
 }
 
 dashboard.section.header.opts = {
