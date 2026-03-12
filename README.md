@@ -129,6 +129,7 @@ All keybindings use `<Space>` as the leader key.
 | **blink.cmp** | Completion engine |
 | **LuaSnip** | Snippets |
 | **oxocarbon.nvim** | Theme |
+| **zenbones** | Theme |
 
 ## Options Highlights
 
