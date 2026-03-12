@@ -2,7 +2,7 @@
 <img width="857" height="461" alt="image" src="https://github.com/user-attachments/assets/49e3bc56-2450-43b2-b11b-a3d3bebe2014" />
 
 
-A Neovim config using native Neovim features with Lua.
+A Neovim config from hell.
 
 ## Overview
 
