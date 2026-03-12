@@ -102,6 +102,7 @@ dashboard.config.opts = {
 		dashboard.section.footer,
 	},
 	opts = {
+		position = "center",
 		margin = 3,
 	},
 }
